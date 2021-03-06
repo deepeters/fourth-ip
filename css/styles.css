@@ -1,6 +1,5 @@
 header {
     background: maroon;
-    opacity: 1.0;
 }
 header::after {
     content: '';
@@ -36,7 +35,7 @@ nav li {
 }
 
 nav a {
-    color: #444;
+    color: wheat;
     text-decoration: none;
     text-transform: uppercase;
     font-size: larger;
@@ -74,7 +73,7 @@ h1 {
     color: white;
     font-weight: 900;
     text-align: center;
-    font-size:30vh;
+    font-size:18vh;
 }
 
 h2{
@@ -83,6 +82,13 @@ h2{
 
 h3 {
     font-family: "Amatic SC", sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 7vh; 
+}
+
+span {
+    background-color: black;
 }
 
 h4 {
