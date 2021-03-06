@@ -93,6 +93,23 @@ span {
     background-color: black;
 }
 
+.items {
+        background-color: red;
+        color: blanchedalmond;
+}
+
+.price {
+        background-color: grey;
+        color: maroon;
+        text-align: right;
+}
+.price-items{
+        background-color: grey;
+        color: maroon;
+        text-align: right;
+        font-weight: 700;
+}
+
 h4 {
     font-family: "Amatic SC", sans-serif;
     color: white;
