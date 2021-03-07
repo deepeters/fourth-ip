@@ -169,3 +169,11 @@ a {
 .about {
     background-color: #8b5f5c;
 }
+
+.about-text {
+    font-family: "Amatic SC", sans-serif;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    font-size:3vh;
+}
