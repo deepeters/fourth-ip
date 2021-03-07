@@ -1,6 +1,9 @@
 header {
-    background: maroon;
-}
+    background: #5e5a59;
+    position: fixed;
+    display: block;
+    width: 100%;
+} 
 header::after {
     content: '';
     display: table;
@@ -148,7 +151,7 @@ h6 {
     background-repeat: no-repeat;
     /*background-attachment: fixed; */
     background-size: cover;
-    height: 800px;
+    height: 900px;
     background-position: center;
 }
 
@@ -177,3 +180,13 @@ a {
     text-align: left;
     font-size:3vh;
 }
+
+/*.navbar{
+    position:fixed;
+    top: 0;
+    background-color: #5e5a59;
+    width: 100%;
+    float: right;
+    align-content: center;
+
+} */
