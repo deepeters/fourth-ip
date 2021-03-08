@@ -22,14 +22,17 @@
                         <li><a href="#contact">CONTACT</a></li> 
                         <li><a href="check-out.html">CHECK OUT</a></li> 
                     </ul>
-                </nav>
+                </nav> hello
         </div>
     </header>
         <div class="container-fluid bgImg1" id="home">
             <br> <br> <br> <br>
             <h1>BEST PIZZA <br> IN <br> NAIROBI CITY</h1>
-            <button id="modal-btn"> <h3><a href = "#order"><p class="modal-button-text"> MAKE YOUR ORDER NOW</p></a></h3></button>
+           
             <br> <br>
+        </div>
+        <div class= "container-fluid order-now" id = "order">
+            <button id="modal-btn"> <h3><a href = "#order"><p class="modal-button-text"> MAKE YOUR ORDER NOW</p></a></h3></button>
         </div>
     <div class = "container-fluid menu" id="menu"> <br><br>
         <h4>THE MENU</h4>
@@ -153,47 +156,212 @@
           <span class="close-btn items">CLOSE</span>
         </div>
         <div class="modal-content">
-            <h5>MAKE YOUR ORDER</h5> 
-            <h6>MARGHERITA</h6>
-            <p class="menu-items">
-                FRESH TOMATOES, FRESH MOZZARELLA, FRESH BASIL
-            </p>
-                <p class="price-items"><span class="price">KES 1250</span></p>
-            
-            <h6>FORMAGGIO</h6>
-            <p class="menu-items">
-                FOUR CHEESES (MOZZARELLA,PARMESAN,PECORINO,JARZSBERG)
-            </p>
-            <p class="price-items"><span class="price">KES 1550</span></p>
-            </p>
-            <h6>CHICKEN</h6>
-            <p class="menu-items">
-                FRESH TOMATOES, MOZZARELLA, CHICKEN, ONIONS, ONIONS <br>
-            </p>
-            <p class="price-items"><span class="price">KES 1700</span></p>
-            </p>
-            <h6>PINEAPPLE O'CLOCK</h6>
-            <p class="menu-items">
-                FRESH TOMATOES, MOZZARELLA, FRESH PINEAPPLE, BACON FRESH BASIL
-            </p>
-            <p class="price-items"><span class="price">KES 1650</span></p>
-            </p>
-            <h6>MEAT TOWN - <span class="items">HOT</span></h6>
-            <p class="menu-items">
-                FRESH TOMATOES, MOZZARELLA, HOT PEPPORONI, HOT SAUSAGE, BEEF, CHICKEN
-            </p>
-            <p class="price-items"><span class="price">KES 2000</span></p>
-            </p>
-            <h6>PARMA - <span class="items">NEW</span></h6>
-            <p class="menu-items">
-                FRESH TOMATOES, FRESH MOZZARELLA, FRESH BASIL
-            </p>
-            <p class="price-items"><span class="price">KES 2150</span></p>
-            </p>
+            <div class="aside-section">
+                <div class="order-form text-center">
+                  <h3>Make Your Order</h3>
+                  <form>
+                    <div class="mb-2">
+                      <label for="pizza"><p class = "about-text">Select pizza category</p></label>
+                      <select id="pizzaCategory" class="form-control" required>
+                        <option value="">...</option>
+                        <option value="meatarian">MARGHERITA</option>
+                        <option value="vegetarian">FORMAGGIO</option>
+                      </select>
+                    </div>
+                    <div class="mb-2">
+                      <label for="pizza"><p class = "about-text">Select your pizza</p></label>
+                      <select id="pizzaOption" class="form-control" required>
+                        <option value="">...</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="size"><p class = "about-text">Size</p></label>
+                      <select id="pizzaSize" class="form-control" required>
+                        <option value="">...</option>
+                        <option value="large">Large</option>
+                        <option value="medium">Medium</option>
+                        <option value="small">Small</option>
+                      </select>
+                    </div>
+                    <div class="mb-2">
+                      <label for="topping"><p class = "about-text">Topping</p></label>
+                      <select class="form-control" id="topping" required>
+                        <option value="">...</option>
+                        <option value="mushroom">Mushroom</option>
+                        <option value="pepperoni">Pepperoni</option>
+                        <option value="sausage">Sausage</option>
+                      </select>
+                    </div>
+                    <div class="mb-2">
+                      <label for="crust"><p class = "about-text">Crust</p></label>
+                      <select class="form-control" id="crust" required>
+                        <option value="">...</option>
+                        <option value="crispy">Crispy</option>
+                        <option value="stuffed">Stuffued</option>
+                        <option value="gluten-free">Gluten-free</option>
+                        <option value="thin">Stuffued</option>
+                      </select>
+                    </div>
+                    <div class="mb-2">
+                      <label for="amount"><p class = "about-text">Amount</p></label>
+                      <input
+                        class="form-control"
+                        id="amount"
+                        type="number"
+                        required
+                      />
+                    </div>
+  
+                    <button type="submit" class="btn btn-outline-success mt-2">
+                      Add
+                    </button>
+                    <div class="d-flex justify-content-center">
+                      <div class="cart text-center">
+                        <div class="cart-btn">
+                          <img
+                            src="./images/shopping-cart.png"
+                            class="mx-3"
+                            alt=""
+                          />
+                          <button id="myBtn" class="btn custom-button mx-5">
+                            Checkout
+                          </button>
+                        </div>
+  
+                        <p class="cart-items p-0 m-0">
+                          <span id="cart-count"></span>
+                        </p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-12">
+            <div
+              class="modal fade"
+              id="myModal"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              tabindex="-1"
+              data-backdrop="static"
+              data-keyboard="false"
+              [config]="{ignoreBackdropClick: true, keyboard: false}"
+            >
+              <div class="modal-dialog modal-xl modal-xs modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Your Order</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="col-md-12 hidden" id="orders-div">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Type</th>
+                            <th scope="col">Topping</th>
+                            <th scope="col">Crust</th>
+                            <th scope="col">Number Of Pizza</th>
+                            <th scope="col">Total Price</th>
+                          </tr>
+                        </thead>
+                        <tbody id="order-summary"></tbody>
+                      </table>
+  
+                      <p class="total-amount hidden">
+                        Total: Ksh. <span id="total-amount"></span>
+                      </p>
+  
+                      <br /><br />
+                      <div
+                        class="d-flex justify-content-center"
+                        id="collectOption"
+                      >
+                        <button
+                          class="btn custom-button mx-4 text-uppercase checkoutBtn"
+                        >
+                          Collect
+                        </button>
+                        <button
+                          class="btn custom-button text-uppercase"
+                          id="deliveryBtn"
+                        >
+                          Delivery
+                        </button>
+                      </div>
+  
+                      <div class="d-flex justify-content-center delivery-form">
+                        <form id="deliveryForm">
+                          <p>
+                            Please fill out your details so we can arrange the
+                            delivery of your order at Ksh:300
+                          </p>
+                          <div class="mb-2">
+                            <label for="fullName">Your Name</label>
+                            <input
+                              type="text"
+                              id="fullName"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                          <div class="mb-2">
+                            <label for="phone">Phone Number</label>
+                            <input
+                              type="number"
+                              id="phone"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                          <div class="mb-2">
+                            <label for="location">Location</label>
+                            <input
+                              type="text"
+                              placeholder="CBD,Gpo/Archives or Kasarani,Naivas"
+                              id="location"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                          <button
+                            type="submit"
+                            class="btn custom-button text-uppercase checkoutBtn"
+                          >
+                            Checkout
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="modal fade" id="checkoutModal" tabindex="-1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Thank you for choosing us</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p id="checkoutText"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="modal-footer">
-            <span class="close-btn items">CLOSE</span>
-        </div>
+      </div>
       </div>
     
     <div class = "container-fluid about" id="about"> <br>
@@ -290,11 +458,9 @@
                 <div class="form-group form-inline">
                     <button type="submit" id="btn-submit">
                         <p class="contact-text"> SEND MESSAGE </p>
-                    </button>
+                    </button> <br><br><br><br>
                 </div>
-
-        </div>
-
+            </div>
         </form>
     </div>
 
