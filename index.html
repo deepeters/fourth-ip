@@ -161,7 +161,7 @@
                   <h3>Make Your Order</h3>
                   <form>
                     <div class="mb-2">
-                      <label for="pizza"><p class = "about-text">Select pizza category</p></label>
+                      <label for="pizza"><p class = "about-text">WHAT PIZZA DO YOU WANT?</p></label>
                       <select id="pizzaCategory" class="form-control" required>
                         <option value="">...</option>
                         <option value="meatarian">MARGHERITA</option>
@@ -169,13 +169,13 @@
                       </select>
                     </div>
                     <div class="mb-2">
-                      <label for="pizza"><p class = "about-text">Select your pizza</p></label>
-                      <select id="pizzaOption" class="form-control" required>
+                      <label for="pizza"><p class = "about-text">WHICH FLAVOUR?</p></label>
+                      <select id="pizzaOption" class="form-control">
                         <option value="">...</option>
                       </select>
                     </div>
                     <div class="mb-3">
-                      <label for="size"><p class = "about-text">Size</p></label>
+                      <label for="size"><p class = "about-text">WHAT SIZE?</p></label>
                       <select id="pizzaSize" class="form-control" required>
                         <option value="">...</option>
                         <option value="large">Large</option>
@@ -184,7 +184,7 @@
                       </select>
                     </div>
                     <div class="mb-2">
-                      <label for="topping"><p class = "about-text">Topping</p></label>
+                      <label for="topping"><p class = "about-text">CHOOSE FAVOURITE TOPPING</p></label>
                       <select class="form-control" id="topping" required>
                         <option value="">...</option>
                         <option value="mushroom">Mushroom</option>
@@ -193,7 +193,7 @@
                       </select>
                     </div>
                     <div class="mb-2">
-                      <label for="crust"><p class = "about-text">Crust</p></label>
+                      <label for="crust"><p class = "about-text">CHOOSE FAVOURITE CRUST</p></label>
                       <select class="form-control" id="crust" required>
                         <option value="">...</option>
                         <option value="crispy">Crispy</option>
@@ -204,27 +204,18 @@
                     </div>
                     <div class="mb-2">
                       <label for="amount"><p class = "about-text">Amount</p></label>
-                      <input
-                        class="form-control"
-                        id="amount"
-                        type="number"
-                        required
-                      />
+                      <input class="form-control" id="amount" type="number" required/>
                     </div>
   
                     <button type="submit" class="btn btn-outline-success mt-2">
-                      Add
+                      ADD TO BASKET
                     </button>
                     <div class="d-flex justify-content-center">
                       <div class="cart text-center">
                         <div class="cart-btn">
-                          <img
-                            src="./images/shopping-cart.png"
-                            class="mx-3"
-                            alt=""
-                          />
+                          <img src="images/shopping-cart.png" class="mx-3" alt=""/>
                           <button id="myBtn" class="btn custom-button mx-5">
-                            Checkout
+                            CHECKOUT
                           </button>
                         </div>
   
@@ -240,20 +231,11 @@
           </div>
   
           <div class="col-md-12">
-            <div
-              class="modal fade"
-              id="myModal"
-              data-bs-backdrop="static"
-              data-bs-keyboard="false"
-              tabindex="-1"
-              data-backdrop="static"
-              data-keyboard="false"
-              [config]="{ignoreBackdropClick: true, keyboard: false}"
-            >
+            <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" data-backdrop="static" data-keyboard="false" [config]="{ignoreBackdropClick: true, keyboard: false}">
               <div class="modal-dialog modal-xl modal-xs modal-dialog-scrollable">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h4 class="modal-title">Your Order</h4>
+                    <h4 class="modal-title">YOUR ORDER IS AS FOLLOWS</h4>
                   </div>
                   <div class="modal-body">
                     <div class="col-md-12 hidden" id="orders-div">
@@ -271,66 +253,38 @@
                       </table>
   
                       <p class="total-amount hidden">
-                        Total: Ksh. <span id="total-amount"></span>
+                        TOTAL: KES. <span id="total-amount"></span>
                       </p>
   
                       <br /><br />
-                      <div
-                        class="d-flex justify-content-center"
-                        id="collectOption"
-                      >
-                        <button
-                          class="btn custom-button mx-4 text-uppercase checkoutBtn"
-                        >
-                          Collect
+                      <div class="d-flex justify-content-center" id="collectOption">
+                        <button class="btn custom-button mx-4 text-uppercase checkoutBtn">
+                          PICK-UP
                         </button>
-                        <button
-                          class="btn custom-button text-uppercase"
-                          id="deliveryBtn"
-                        >
-                          Delivery
+                        <button class="btn custom-button text-uppercase" id="deliveryBtn">
+                          GET DELIVERY
                         </button>
                       </div>
   
                       <div class="d-flex justify-content-center delivery-form">
                         <form id="deliveryForm">
                           <p>
-                            Please fill out your details so we can arrange the
-                            delivery of your order at Ksh:300
+                            FILL IN YOUR DELIVERY DETAILS
+                            DELIVERY FEE IS KES 300
                           </p>
-                          <div class="mb-2">
-                            <label for="fullName">Your Name</label>
-                            <input
-                              type="text"
-                              id="fullName"
-                              class="form-control"
-                              required
-                            />
+                          <div class="mb-2"> <label for="fullName">YOUR NAME</label>
+                            <input type="text" id="fullName" class="form-control" required/>
                           </div>
                           <div class="mb-2">
-                            <label for="phone">Phone Number</label>
-                            <input
-                              type="number"
-                              id="phone"
-                              class="form-control"
-                              required
-                            />
+                            <label for="phone">YOUR PHONE NUMBER</label>
+                            <input type="number" id="phone" class="form-control" required/>
                           </div>
                           <div class="mb-2">
-                            <label for="location">Location</label>
-                            <input
-                              type="text"
-                              placeholder="CBD,Gpo/Archives or Kasarani,Naivas"
-                              id="location"
-                              class="form-control"
-                              required
-                            />
+                            <label for="location">YOUR PHYSICAL ADRESS</label>
+                            <input type="text" placeholder="KIAMBU ROAD, KIAMBU" id="location" class="form-control" required/>
                           </div>
-                          <button
-                            type="submit"
-                            class="btn custom-button text-uppercase checkoutBtn"
-                          >
-                            Checkout
+                          <button type="submit" class="btn custom-button text-uppercase checkoutBtn">
+                            CHECKOUT
                           </button>
                         </form>
                       </div>
@@ -345,13 +299,8 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title">Thank you for choosing us</h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
+                    <h5 class="modal-title">PIZZA PLACE THANKS YOU</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <p id="checkoutText"></p>
