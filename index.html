@@ -22,11 +22,10 @@
                 <nav>
                     <ul>
                         <li><a href="#">HOME</a></li> 
+                        <li><a href="#order">ORDER</a></li>
                         <li><a href="#menu">MENU</a></li> 
-                        <li><a href="#modal-btn">ORDER</a></li>
                         <li><a href="#about">ABOUT</a></li> 
                         <li><a href="#contact">CONTACT</a></li> 
-                        <li><a href="check-out.html">CHECK OUT</a></li> 
                     </ul>
                 </nav> hello
         </div>
@@ -34,10 +33,12 @@
         <div class="container-fluid bgImg1" id="home">
             <br> <br> <br> <br>
             <h1>BEST PIZZA <br> IN <br> NAIROBI CITY</h1>
-           
+            
             <br> <br>
         </div>
         <div class= "container-fluid order-now" id = "order">
+            <h3>CLICK THIS BUTTON TO MAKE AN ORDER<h3>
+                <img src="images/arrow.gif" height="150" width="100"> <br>
             <button id="modal-btn"> <h3><a href = "#order"><p class="modal-button-text"> MAKE YOUR ORDER NOW</p></a></h3></button>
         </div>
     <div class = "container-fluid menu" id="menu"> <br><br>
@@ -176,7 +177,7 @@
                     </div>
                     <div class="mb-2">
                       <label for="pizza"><p class = "about-text">WHICH FLAVOUR?</p></label>
-                      <select id="pizzaOption" class="form-control">
+                      <select id="pizzaOption" class="form-control" required>
                         <option value="">...</option>
                       </select>
                     </div>
@@ -223,6 +224,7 @@
                           <button id="myBtn" class="btn custom-button mx-5">
                             CHECKOUT
                           </button>
+                          <br> <br> <br> <br> <br> <br>
                         </div>
   
                         <p class="cart-items p-0 m-0">
