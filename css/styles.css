@@ -300,14 +300,15 @@ button[type=submit],
     to {top:0; opacity:1}
   }
 
-  .modal-btn {
+  #modal-btn {
       text-align: center;
       align-content: center;
+      background-color: red;
   }
 
   .modal-button-text {
     font-family: "Amatic SC", sans-serif;
-    color: red;
+    color: white;
     font-weight: 700;
     text-align: center;
     font-size:5vh;
