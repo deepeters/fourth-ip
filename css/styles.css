@@ -132,7 +132,11 @@ h5 {
 }
 
 h6 {
-    
+    font-family: "Amatic SC", sans-serif;
+    color: black;
+    font-weight: 700;
+    text-align: left;
+    font-size:3vh;
 }
 
 .menu-items {
