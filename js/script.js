@@ -46,7 +46,6 @@ function Pizza(pizza, size, crust, topping,amount) {
   var checkoutModal = new bootstrap.Modal(document.getElementById('checkoutModal'))
   
   
-  //Get topping price
   Pizza.prototype.getToppingPrice = function () {
     switch (this.size) {
         case "large":
@@ -64,7 +63,6 @@ function Pizza(pizza, size, crust, topping,amount) {
   };
   };
   
-  //Get Crust price
   Pizza.prototype.getCrustPrice = function () {
     if (this.crust === "crispy") {
       return 100;
@@ -78,7 +76,6 @@ function Pizza(pizza, size, crust, topping,amount) {
     }
   };
   
-  //Get pizza size price
   Pizza.prototype.getPizzaSizePrice = function () {
     switch (this.size) {
     
@@ -97,19 +94,12 @@ function Pizza(pizza, size, crust, topping,amount) {
   };
   };
   
-  //Get total pizza price
   Pizza.prototype.getPizzaPrice = function () {
   
      return (this.getCrustPrice() + this.getToppingPrice() + this.getPizzaSizePrice())* this.amount;
   };
   
-  
-  
-  
-  
-  //user logic
   $(document).ready(function() {
-  
     $(function($) {
       var Options = {
           'meatarian': ['...','Option1','Option2','Option3','Option4','Option5'],
