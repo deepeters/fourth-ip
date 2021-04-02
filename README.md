@@ -1,5 +1,3 @@
-# DENNIS NJENGA FOURTH IP SUBMISSION
-
 ### Project Name: PIZZA PLACE
 
 ### Project Description
